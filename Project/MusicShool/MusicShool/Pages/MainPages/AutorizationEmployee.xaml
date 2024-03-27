@@ -1,0 +1,42 @@
+﻿<Page x:Class="MusicShool.Pages.MainPages.AutorizationEmployee"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AutorizationEmployee">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel 
+    Orientation="Horizontal">
+                <TextBlock
+Text="Введите фамилию:"/>
+                <TextBox
+                    Text="Канищева"
+        Name="Login"
+                Width="100"
+        />
+            </StackPanel>
+
+            <StackPanel 
+    Margin="0,15,0,0"
+    Orientation="Horizontal">
+                <TextBlock
+Text="Введите пароль"/>
+                <PasswordBox
+                    Password="1234"
+                Width="100"
+        Name="Password"
+        />
+            </StackPanel>
+
+            <Button
+    Name="BtnLog"
+    Click="BtnLog_Click"
+    Content="Войти"
+    Margin="0,15,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

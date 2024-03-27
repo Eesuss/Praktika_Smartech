@@ -1,0 +1,58 @@
+﻿<Page x:Class="MusicShool.Pages.StudentPages.StudentMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MusicShool.Pages.StudentPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StudentMainPage">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock
+                Text="[имя ученика]"/>
+            <TextBlock
+    Text="Дата и время следующего занятия:"/>
+        </StackPanel>
+        <StackPanel
+            Cursor="Hand"
+            Margin="50,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+            <StackPanel
+                Width="600"
+                Orientation="Horizontal">
+                <Image
+                    Width="125"
+                    Source="/Resources/Images/FirstCourse.png"/>
+                <TextBlock
+                    Text="Первый курс"
+                    VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel
+                Cursor="Hand"
+                Margin="5"
+    Width="600"
+    Orientation="Horizontal">
+                <Image
+        Width="125"
+        Source="/Resources/Images/SecondCourse.png"/>
+                <TextBlock
+        Text="Второй курс"
+        VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel
+                Cursor="Hand"
+    Width="600"
+    Orientation="Horizontal">
+                <Image
+        Width="125"
+        Source="/Resources/Images/ThirdCourse.png"/>
+                <TextBlock
+        Text="Третий курс"
+        VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

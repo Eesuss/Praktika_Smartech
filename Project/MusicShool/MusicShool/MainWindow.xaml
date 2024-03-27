@@ -1,0 +1,48 @@
+﻿<Window x:Class="MusicShool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicShool"
+        mc:Ignorable="d"
+        MaxHeight="450"
+        MaxWidth="800"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel
+     Orientation="Horizontal"
+     Height="100" 
+     VerticalAlignment="Top">
+            <Image  Source="/Resources/Images/free-icon-guitar-4052961.png"
+             Margin="5"
+             Width="75"/>
+            <TextBlock
+         VerticalAlignment="Top"
+         Margin="5"
+         Text="{Binding ElementName=FrmMain, Path=Content.Title}" Height="34"/>
+
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right"
+             Height="50"
+             VerticalAlignment="Top"
+             Margin="5">
+            <Button
+         Name="BtnBack"
+         Click="BtnBack_Click"
+         HorizontalAlignment="Right"
+         Margin="10"
+         Content="Назад"/>
+        </StackPanel>
+        <Frame 
+    Name="FrmMain"
+    Height="350"
+    Width="800"
+    HorizontalAlignment="Right"
+       VerticalAlignment="Bottom"
+    NavigationUIVisibility="Hidden">
+
+        </Frame>
+
+    </Grid>
+</Window>
