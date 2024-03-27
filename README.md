@@ -1,0 +1,2 @@
+# Praktika_Smartech
+Smartech_Praktika_TKSIOT
