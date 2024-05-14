@@ -24,7 +24,7 @@ namespace MusicShool
             }
             catch (InvalidOperationException ex)
             {
-                MessageBox.Show("Вам некуда отсупать, остановитесь", "Стоп", MessageBoxButton.OK, MessageBoxImage.Stop);
+                MessageBox.Show("Вам некуда отступать, остановитесь", "Стоп", MessageBoxButton.OK, MessageBoxImage.Stop);
                 return;
             }
         }

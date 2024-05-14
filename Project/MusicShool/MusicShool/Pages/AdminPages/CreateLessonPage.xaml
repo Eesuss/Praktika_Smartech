@@ -1,0 +1,135 @@
+﻿<Page x:Class="MusicShool.Pages.AdminPages.CreateLessonPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MusicShool.Pages.AdminPages" xmlns:vm="clr-namespace:MusicShool.MVVM"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="CreateLessonPage">
+    <Page.DataContext>
+        <vm:ApplicationViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Margin="10,0,10,0"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+
+            <TextBlock
+            
+            Text="Курс:"/>
+
+            <ComboBox
+                Margin="12,0,0,0"
+                MinWidth="50">
+                <ComboBoxItem>
+                    <TextBlock
+                    Text="1"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+         Text="2"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+         Text="3"/>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock
+                Margin="12,0,0,0"
+                Text="Урок"/>
+            <ComboBox
+                Margin="12,0,0,0"
+                MinWidth="50">
+                <ComboBoxItem>
+                    <TextBlock
+            Text="1"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+ Text="2"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+ Text="3"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="4"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="5"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="6"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="7"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="8"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="9"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock
+Text="10"/>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <Button
+                Margin="20,0,0,0"
+                Template="{DynamicResource StyleBtnDflt}"
+                CommandParameter="textBox"
+                Command="{Binding TextBoxAddCommand}"
+                Content="Добавить текст"/>
+            <Button
+                Margin="10,0,10,0"
+                Template="{DynamicResource StyleBtnDflt}"
+                CommandParameter="mediaElement"
+Command="{Binding MediaElementAddCommand}"
+                Content="Добавить видео"/>
+            <Button
+                Template="{DynamicResource StyleBtnDflt}"
+                CommandParameter="image"
+Command="{Binding ImageAddCommand}"
+                Content="Добавить фото"/>
+            <Button
+                Margin="10,0,0,0"
+                Template="{DynamicResource StyleBtnDflt}"
+Command="{Binding SaveLessonCommand}"
+                Content="Сохранить урок"/>
+        </StackPanel>
+        <Separator
+            VerticalAlignment="Bottom"/>
+
+        <ScrollViewer
+            Grid.Row="1">
+            <Grid
+                Background="#FEFEFE"
+                HorizontalAlignment="Left"
+                x:Name="LessonGrid"
+                Margin="10">
+                <StackPanel
+                    x:Name="LessonStackPanel">
+                    <ItemsControl ItemsSource="{Binding ContentItems}"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

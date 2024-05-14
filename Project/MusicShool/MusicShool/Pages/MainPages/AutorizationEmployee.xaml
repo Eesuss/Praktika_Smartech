@@ -4,39 +4,55 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
+      FontFamily="Comic Neue"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AutorizationEmployee">
+      Title="Сотрудник">
 
     <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel 
-    Orientation="Horizontal">
-                <TextBlock
-Text="Введите фамилию:"/>
-                <TextBox
-                    Text="Канищева"
-        Name="Login"
-                Width="100"
-        />
-            </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel 
+         HorizontalAlignment="Center"
+         Orientation="Vertical" 
+         VerticalAlignment="Center">
+            <StackPanel
+             Orientation="Horizontal">
+                <StackPanel
+             Orientation="Vertical">
+                    <TextBlock
+                     Text="Логин"/>
+                    <TextBlock
+                     Margin="0,15,0,0"
+                     Text="Пароль"/>
+                </StackPanel>
 
-            <StackPanel 
-    Margin="0,15,0,0"
-    Orientation="Horizontal">
-                <TextBlock
-Text="Введите пароль"/>
-                <PasswordBox
-                    Password="1234"
-                Width="100"
-        Name="Password"
-        />
+                <StackPanel
+             Orientation="Vertical"
+             Margin="25,0,0,0">
+                    <TextBox
+                     MinWidth="150"
+                     MaxWidth="500"/>
+                    <PasswordBox
+                     Margin="0,15,0,0"/>
+                </StackPanel>
             </StackPanel>
-
-            <Button
-    Name="BtnLog"
-    Click="BtnLog_Click"
-    Content="Войти"
-    Margin="0,15,0,0"/>
+            <Button Template="{DynamicResource StyleBtnDflt}"
+  Name="BtnLog"
+                 HorizontalAlignment="Center"
+  Click="BtnLog_Click"
+  Content="Войти"
+  Margin="0,15,0,0"/>
         </StackPanel>
+        <Button
+     HorizontalAlignment="Right"
+     VerticalAlignment="Bottom"
+     Content="Назад"
+     Template ="{DynamicResource StyleBtnDflt}"
+     Margin="15"
+     />
     </Grid>
 </Page>

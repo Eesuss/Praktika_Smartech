@@ -106,11 +106,20 @@
     <Compile Include="Calen\CalendarBackround.cs" />
     <Compile Include="DB\Queries\Get\Get.cs" />
     <Compile Include="DB\Queries\Post\Post.cs" />
-    <Compile Include="Entities\Models.cs" />
+    <Compile Include="Entities\Course.cs" />
+    <Compile Include="Entities\Journal.cs" />
+    <Compile Include="Entities\Lesson.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AdminPages\CreateLessonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminPages\Employees.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,7 +158,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\ApplicationViewModel.cs" />
+    <Compile Include="MVVM\RelayCommand.cs" />
     <Compile Include="Navigation.cs" />
+    <Compile Include="Pages\AdminPages\CreateLessonPage.xaml.cs">
+      <DependentUpon>CreateLessonPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminPages\Employees.xaml.cs">
       <DependentUpon>Employees.xaml</DependentUpon>
     </Compile>
@@ -221,6 +235,7 @@
     <Resource Include="Resources\Images\Calend\circle.png" />
     <Resource Include="Resources\Images\Calend\cross.png" />
     <Resource Include="Resources\Images\Calend\Tjek.png" />
+    <SplashScreen Include="Resources\Images\zastavka.jpg" />
     <Content Include="Resources\MediaContentLesson\TestMedia.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

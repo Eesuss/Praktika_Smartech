@@ -5,39 +5,72 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MusicShool.Pages.MainPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Autorization">
+      FontFamily="Comic Neue"
+      d:DesignHeight="450" d:DesignWidth="1000"
+      Title="Авторизация">
+    <Grid
+        Background="#FBFBFD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="8*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-    <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel 
-        Orientation="Horizontal">
-                <TextBlock
-    Text="Введите фамилию:"/>
-                <TextBox
-            Name="Login"
-                    Width="100"
-            />
-            </StackPanel>
-
-            <StackPanel 
-        Margin="0,15,0,0"
-        Orientation="Horizontal">
-                <TextBlock
-    Text="Введите телефон:"/>
-                <TextBox
-                    Width="100"
-            Name="Password"
-            />
-            </StackPanel>
-
-            <Button
-        Name="BtnLog"
-        Click="BtnLog_Click"
-        Content="Войти"
-        Margin="0,15,0,0"/>
-
+        <StackPanel
+            Grid.Row="1">
+            <Image  Source="/Resources/Images/free-icon-guitar-4052961.png"
+                    MaxWidth="320" MaxHeight="300"/>
             <TextBlock
+           FontSize="32">
+              Школа гитары
+            </TextBlock>
+
+
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Orientation="Vertical" 
+            VerticalAlignment="Center">
+            <StackPanel
+                Orientation="Horizontal">
+                <StackPanel
+                Orientation="Vertical">
+                </StackPanel>
+
+                <StackPanel
+                Orientation="Vertical">
+                    <TextBlock
+    Text="Фамилия"/>
+                    <TextBox
+                        Margin="0,15,0,0"
+                        MinWidth="150"
+                        MaxWidth="500"/>
+                    <TextBlock
+    Margin="0,15,0,0"
+    Text="Пароль"/>
+                    <PasswordBox
+                        x:Name="psbbox"
+                        Margin="0,15,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Template="{DynamicResource StyleBtnDflt}"
+     Name="BtnLog"
+                    HorizontalAlignment="Center"
+     Click="BtnLog_Click"
+     Content="Войти"
+     Margin="0,15,0,0"/>
+            <TextBlock
+                x:Name="TxblImEmpl"
+                HorizontalAlignment="Center"
                 Cursor="Hand"
                 MouseDown="TextBlock_MouseDown"
                 TextDecorations="Underline"
@@ -45,8 +78,17 @@
                 Text="Я сотрудник"
                 TextAlignment="Center"
                 FontStyle="Italic"
-                Foreground="Blue"/>
+                Foreground="#E2C8B5"/>
         </StackPanel>
 
+        <Button
+            Margin="15"
+            Grid.Column="3"
+            Grid.Row="3"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Content="Выход"
+            Template ="{DynamicResource StyleBtnDflt}"
+            />
     </Grid>
 </Page>

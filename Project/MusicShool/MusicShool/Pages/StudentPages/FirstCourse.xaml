@@ -16,16 +16,19 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="8*" />
         </Grid.RowDefinitions>
-        <ListBox Grid.Column="0" 
-                 Grid.Row="1"
-                 ItemsSource="{Binding Lessons}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="5">
-                        <TextBlock FontSize="18" Text="{Binding Path=Lesson_name}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+
+        <FlowDocumentScrollViewer
+      Grid.Row="1">
+            <FlowDocument>
+                <Paragraph>
+                    <TextBlock
+                  TextAlignment="Left"
+                  Text=""
+                  TextWrapping="Wrap"/>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+
     </Grid>
 </Page>
